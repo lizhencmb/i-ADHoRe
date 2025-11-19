@@ -1,0 +1,116 @@
+name: Build Binaries
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master, main]
+  release:
+    types: [created]
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-20.04
+            artifact_name: i-adhore
+            asset_name: i-adhore-linux
+            
+          - os: macos-13  # Intel Mac
+            artifact_name: i-adhore
+            asset_name: i-adhore-macos-intel
+            
+          - os: macos-14  # Apple Silicon
+            artifact_name: i-adhore
+            asset_name: i-adhore-macos-arm64
+            
+          - os: windows-latest
+            artifact_name: i-adhore.exe
+            asset_name: i-adhore-windows.exe
+    
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Install dependencies (Ubuntu)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake
+      
+      - name: Install dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew install cmake
+      
+      - name: Install dependencies (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
+        shell: bash
+      
+      - name: Configure CMake
+        run: |
+          mkdir build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE=Release ..
+      
+      - name: Build
+        run: |
+          cd build
+          cmake --build . --config Release -j2
+      
+      - name: Prepare artifacts (Unix)
+        if: runner.os != 'Windows'
+        run: |
+          mkdir -p artifacts
+          cp build/${{ matrix.artifact_name }} artifacts/
+          chmod +x artifacts/${{ matrix.artifact_name }}
+      
+      - name: Prepare artifacts (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          mkdir -p artifacts
+          cp build/Release/${{ matrix.artifact_name }} artifacts/ || cp build/${{ matrix.artifact_name }} artifacts/
+        shell: bash
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.asset_name }}
+          path: artifacts/${{ matrix.artifact_name }}
+          if-no-files-found: error
+
+  release:
+    name: Create Release with Binaries
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'release'
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: binaries
+      
+      - name: Display structure
+        run: ls -R binaries/
+      
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: binaries-${{ github.run_number }}
+          name: Compiled Binaries (Build ${{ github.run_number }})
+          draft: false
+          prerelease: false
+          files: binaries/*/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
