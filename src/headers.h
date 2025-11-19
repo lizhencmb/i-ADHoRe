@@ -25,7 +25,8 @@ using std::string;
 using __gnu_cxx::hash_map;
 using __gnu_cxx::hash_set;
 using __gnu_cxx::hash;
-using __gnu_cxx::pair;
+//using __gnu_cxx::pair;
+using std::pair;
 
 #include "datastructures/stringhash.h"
 using __gnu_cxx::stringhash;

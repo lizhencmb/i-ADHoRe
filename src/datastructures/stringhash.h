@@ -12,7 +12,8 @@ namespace __gnu_cxx {
 struct stringhash
 {
 	size_t operator()(const string& s) const
-	{ return __stl_hash_string(s.c_str()); }
+	//{ return __stl_hash_string(s.c_str()); }
+	{ return std::hash<std::string>{}(s); }
 };
 
 }

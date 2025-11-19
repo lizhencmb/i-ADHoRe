@@ -1,5 +1,5 @@
 # CMake compatibility issues: don't modify this, please!
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.5)
 
 # user section
 project(i-ADHoRe)
