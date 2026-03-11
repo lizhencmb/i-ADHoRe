@@ -8,6 +8,16 @@ The i-ADHoRe algorithm is based on the initial ADHoRe algorithm. After detecting
 
 More information can be found on [bioinformatics.psb.ugent.be](http://bioinformatics.psb.ugent.be/software/details/i--ADHoRe).
 
+## Installation via conda (recommended)
+
+This fork provides a pre-built conda package for macOS (Apple Silicon) with bug fixes for macOS compatibility.
+
+```bash
+conda install -c lizhencmb -c conda-forge i-adhore
+```
+
+This installs the `i-adhore` and `i-visualize` executables directly into your conda environment.
+
 ## Basic Installation on Linux
 
 This package requires CMake to build the software.  
