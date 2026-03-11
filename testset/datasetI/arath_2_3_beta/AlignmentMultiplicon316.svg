@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="7.375cm" height="11cm" >
+<rect x="2.5cm" y="2.5cm" width="1.125cm" height="1.125cm" fill="#cf5c66" stroke-width="5" />
+<circle cx="3.0625cm" cy="3.0625cm" r="0.225cm" />
+<rect x="4.125cm" y="2.5cm" width="1.125cm" height="1.125cm" fill="#f03ee" stroke-width="5" />
+<circle cx="4.6875cm" cy="3.0625cm" r="0.225cm" />
+<rect x="5.75cm" y="2.5cm" width="1.125cm" height="1.125cm" fill="#b224f2" stroke-width="5" />
+<circle cx="6.3125cm" cy="3.0625cm" r="0.225cm" />
+<rect x="2.5cm" y="4.625cm" width="1.125cm" height="1.125cm" fill="#cf5c66" stroke-width="5" />
+<circle cx="3.0625cm" cy="5.1875cm" r="0.225cm" />
+<rect x="4.125cm" y="4.625cm" width="1.125cm" height="1.125cm" fill="#f03ee" stroke-width="5" />
+<circle cx="4.6875cm" cy="5.1875cm" r="0.225cm" />
+<rect x="5.75cm" y="4.625cm" width="1.125cm" height="1.125cm" fill="#b224f2" stroke-width="5" />
+<circle cx="6.3125cm" cy="5.1875cm" r="0.225cm" />
+<rect x="2.5cm" y="6.75cm" width="1.125cm" height="1.125cm" fill="#cf5c66" stroke-width="5" />
+<circle cx="3.0625cm" cy="7.3125cm" r="0.225cm" />
+<rect x="4.125cm" y="6.75cm" width="1.125cm" height="1.125cm" fill="#f03ee" stroke-width="5" />
+<circle cx="4.6875cm" cy="7.3125cm" r="0.225cm" />
+<rect x="5.75cm" y="6.75cm" width="1.125cm" height="1.125cm" fill="#b224f2" stroke-width="5" />
+<circle cx="6.3125cm" cy="7.3125cm" r="0.225cm" />
+<rect x="2.5cm" y="8.875cm" width="1.125cm" height="1.125cm" fill="#cf5c66" stroke-width="5" />
+<circle cx="3.0625cm" cy="9.4375cm" r="0.225cm" />
+<rect x="4.125cm" y="8.875cm" width="1.125cm" height="1.125cm" fill="#f03ee" stroke-width="5" />
+<circle cx="4.6875cm" cy="9.4375cm" r="0.225cm" />
+<rect x="5.75cm" y="8.875cm" width="1.125cm" height="1.125cm" fill="#b224f2" stroke-width="5" />
+<circle cx="6.3125cm" cy="9.4375cm" r="0.225cm" />
+<text x="2.5cm" y="2.3875cm" font-family="Verdana" font-size="6" fill="black" >
+AT2G06610
+</text>
+<text x="4.125cm" y="2.3875cm" font-family="Verdana" font-size="6" fill="black" >
+AT2G06620
+</text>
+<text x="5.75cm" y="2.3875cm" font-family="Verdana" font-size="6" fill="black" >
+AT2G06630
+</text>
+<text x="2.5cm" y="4.5125cm" font-family="Verdana" font-size="6" fill="black" >
+AT5G35655
+</text>
+<text x="4.125cm" y="4.5125cm" font-family="Verdana" font-size="6" fill="black" >
+AT5G35650
+</text>
+<text x="5.75cm" y="4.5125cm" font-family="Verdana" font-size="6" fill="black" >
+AT5G35646
+</text>
+<text x="2.5cm" y="6.6375cm" font-family="Verdana" font-size="6" fill="black" >
+AT4G05303
+</text>
+<text x="4.125cm" y="6.6375cm" font-family="Verdana" font-size="6" fill="black" >
+AT4G05300
+</text>
+<text x="5.75cm" y="6.6375cm" font-family="Verdana" font-size="6" fill="black" >
+AT4G05280
+</text>
+<text x="2.5cm" y="8.7625cm" font-family="Verdana" font-size="6" fill="black" >
+AT1G27810
+</text>
+<text x="4.125cm" y="8.7625cm" font-family="Verdana" font-size="6" fill="black" >
+AT1G27800
+</text>
+<text x="5.75cm" y="8.7625cm" font-family="Verdana" font-size="6" fill="black" >
+AT1G27780
+</text>
+<text x="0.5cm" y="3.0625cm" font-family="Verdana" font-size="25" fill="black" >
+ath 2
+</text>
+<text x="0.5cm" y="5.1875cm" font-family="Verdana" font-size="25" fill="black" >
+ath 5
+</text>
+<text x="0.5cm" y="7.3125cm" font-family="Verdana" font-size="25" fill="black" >
+ath 4
+</text>
+<text x="0.5cm" y="9.4375cm" font-family="Verdana" font-size="25" fill="black" >
+ath 1
+</text>
+</svg>

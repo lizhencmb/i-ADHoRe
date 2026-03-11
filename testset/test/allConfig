@@ -1,0 +1,25 @@
+genome=Ath
+4 Arabidopsis/4.listed
+1 Arabidopsis/1.listed
+3 Arabidopsis/3.listed
+2 Arabidopsis/2.listed
+5 Arabidopsis/5.listed
+
+blast_table=./allBlastPairs
+table_type=pairs
+output_path=./
+cluster_type=collinear
+prob_cutoff=0.01
+write_stats=true
+level_2_only=false
+multiple_hypothesis_correction=FDR
+gap_size=35
+cluster_gap=40
+q_value=0.75
+anchor_points=3
+alignment_method=gg2
+max_gaps_in_alignment=40
+visualizeGHM=false
+visualizeAlignment=false
+verbose_output=true
+

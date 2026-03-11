@@ -165,9 +165,9 @@ void DataSet::getGenePairs()
             hash_set<string,stringhash>* pairs =
             genepairs->getPairsOf(list[j]->getGene().getID());
 
-            list[j]->getGene().setPairs(*pairs);
-
             if (pairs == NULL) continue;
+
+            list[j]->getGene().setPairs(*pairs);
 
             // remove genes from the pairs set, if they do not
             // exist in the genes
